@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="img-div">
+        <img name="slide" class="images">
+    </div>
+
+    <div class="nav-buttons">
+        
+    <div class="left-arrow" onclick="left()">
+        <img src="left.png" id="arrow-left">
+    </div>
+    
+    <div class="right-arrow" onclick="right()">
+        <img src="right.png" id="arrow-right">
+    </div>
+
+    </div>
+    
+
+
+    <script>
+        var i = 0; 			
+        var images = [];	
+        var time = 10000;	
+	 
+        
+        images[0] = "pic.jfif";
+        images[1] = "wow2.jfif";
+        images[2] = "Wow.jpg";
+
+        function left(){
+            document.slide.src = images[i];
+            
+            if(i==0){
+                i=2;
+            }
+            else{
+                i--
+            }
+        }
+
+        function right(){
+            document.slide.src = images[i];
+            
+            if(i==2){
+                i=0;
+            }
+            else{
+                i++
+            }
+        }
+        
+
+        
+        function changeImg(){
+    	document.slide.src = images[i];
+
+    	
+    	if(i < images.length - 1){
+            i++; 
+	    } 
+        else { 
+		    i = 0;
+	    }
+
+	    
+	    setTimeout("changeImg()", time);
+        }
+
+        
+        window.onload=changeImg;
+    </script>
+</body>
+</html>
