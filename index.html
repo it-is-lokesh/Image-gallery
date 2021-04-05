@@ -29,7 +29,7 @@
     <script>
         var i = 0; 			
         var images = [];	
-        var time = 10000;	
+        var time = 5000;	
 	 
         
         images[0] = "pic.jfif";
@@ -41,24 +41,15 @@
         images[6] = "3.png";
         images[7] = "4.jpg";
         images[8] = "5.jpg";
-        images[9] = "6.png";
+        images[9] = "6.jpg";
         images[10] = "7.jpg";
         images[11] = "8.jpg";
-        images[12] = "9.jpg";
-        images[13] = "10.jpg";
-        images[14] = "11.jpg";
-        images[15] = "12.jpg";
-        images[16] = "13.jpg";
-        images[17] = "14.jpg";
-        images[18] = "15.jpg";
-        images[19] = "16.jpg";
-        images[20] = "17.jpg";
-
+        
         function left(){
             document.slide.src = images[i];
             
             if(i==0){
-                i=20;
+                i=11;
             }
             else{
                 i--
@@ -68,7 +59,7 @@
         function right(){
             document.slide.src = images[i];
             
-            if(i==20){
+            if(i==11){
                 i=0;
             }
             else{
